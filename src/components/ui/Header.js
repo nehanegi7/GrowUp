@@ -1,6 +1,7 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
           threshold: 0,
           target: window ? window() : undefined,
         });
-      
+    
         return React.cloneElement(children, {
           elevation: trigger ? 4 : 0,
         });
@@ -23,7 +24,9 @@ const Header = () => {
         <ElevationScroll>
             <AppBar position='fixed'>
                 <Toolbar>
+                    <Typography variant="h3">
                     Grow Up
+                    </Typography>
                 </Toolbar>
             </AppBar>
          </ElevationScroll>
